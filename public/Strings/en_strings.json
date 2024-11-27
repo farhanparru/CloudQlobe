@@ -1,0 +1,102 @@
+{
+  "SERVICES_SECTION-1_TITLE": "CLI VOICE TERMINATION",
+  "SERVICES_SECTION-1_DESCRIPTION": "Cloud Qlobe enables our wholesale VoIP service providers and carriers to operate from anywhere in the world. Our services help clients to connect, buy, sell, and offer premium VoIP termination services to their customers. This wholesale VoIP and routing solution allows our clients to create new revenue opportunities in a stable and secure environment, spanning a wide range of telecom services.",
+  "SERVICES_SECTION-1_IMAGE_SRC": "/images/Services_section_img-1.png",
+  "SERVICES_SECTION-1_IMAGE_ALT": "VoIP Illustration",
+
+  "SERVICES_SECTION-2_TITLE": "CC VOICE SOLUTIONS",
+  "SERVICES_SECTION-2_DESCRIPTION": "CC Traffic refers to routing methods used in call centers to efficiently manage high volumes of calls. These routes involve advanced processes such as call request distribution, customer support resource allocation, and call load balancing. CC Traffic encompasses the flow of phone calls received and routed through the call center, typically including incoming customer service calls, sales inquiries, and other types of communication. By analyzing call traffic data, businesses can identify peak call volumes and optimize their routing strategies to ensure efficient call handling.",
+  "SERVICES_SECTION-2_IMAGE_SRC": "/images/Services_section_img-2.png",
+  "SERVICES_SECTION-2_IMAGE_ALT": "CC Voice Solutions Illustration",
+
+  "SERVICES_SECTION-3_TITLE": "DID SERVICES",
+  "SERVICES_SECTION-3_DESCRIPTION": "Cloud Qlobe offers premium inbound and outbound VoIP services, along with virtual numbers available in our online inventory! We provide onboarding activation through our portal and will soon offer it via API. Our wide range of international virtual numbers includes Direct Inward Dialing (DID) for mobile, geographic, non-geographic, toll-free, and UIFN (Universal International Freephone Numbers).",
+  "SERVICES_SECTION-3_IMAGE_SRC": "/images/9.svg",
+  "SERVICES_SECTION-3_IMAGE_ALT": "VoIP Illustration",
+
+  "ABOUT_BANNER_IMAGE_SRC": "/Banner/about_us.png",
+  "ABOUT_BANNER_IMAGE_ALT": "About Us Banner",
+
+  "ABOUT_SECTION_1_IMAGE_SRC": "/images/11.svg",
+  "ABOUT_SECTION_1_IMAGE_ALT": "VoIP Illustration",
+  "ABOUT_SECTION_1_DESCRIPTION": "We are global leaders in delivering high-quality call center and wholesale VoIP termination services, backed by over a decade of extensive experience in the telecommunications industry. Our expert team has developed a robust Carrier Platform specifically designed for telecom operators, carriers, and service providers. This innovative platform empowers Mobile Network Operators (MNOs), Tier 1 carriers, enterprise customers, and service providers to achieve efficient network management, maximize network redundancy, and implement high-quality routing mechanisms—all while enjoying competitive pricing. By leveraging our extensive wholesale VoIP traffic volume, businesses can negotiate advantageous terms with telecom operators around the world, allowing them to secure bulk VoIP traffic at reduced rates and realize significant cost savings.",
+
+  "ABOUT_SECTION_2_IMAGE_SRC": "/images/6.svg",
+  "ABOUT_SECTION_2_IMAGE_ALT": "CC Voice Solutions Illustration",
+  "ABOUT_SECTION_2_DESCRIPTION": "The advantages of our services extend to fostering new revenue opportunities through wholesale and call center VoIP route trading, all within a stable and secure environment. Our platform covers a wide array of telecom services, enabling clients to diversify their offerings and tap into emerging markets. By participating in VoIP route trading, businesses can strategically position themselves to capitalize on market fluctuations and demand, driving additional income streams while ensuring service reliability and quality. The potential for increased profitability is immense, as clients can respond swiftly to changing market dynamics and customer needs.",
+
+  "ABOUT_SECTION_3_IMAGE_SRC": "/images/4.svg",
+  "ABOUT_SECTION_3_IMAGE_ALT": "VoIP Illustration",
+  "ABOUT_SECTION_3_DESCRIPTION": "To facilitate seamless transactions, Cloud Qlobe provides its members with dedicated client accounts that grant access to a vibrant trading community. Our web-based portal allows for anonymous trading, ensuring privacy and security during transactions. This user-friendly interface empowers clients to manage their accounts effortlessly while accessing valuable market insights and analytics to inform their decisions. As part of our commitment to client success, we continuously enhance our platform's features, ensuring our members have the tools and resources necessary to thrive in the competitive telecommunications landscape.",
+
+  "CC_ROUTES_BANNER_IMAGE_SRC": "/Banner/CC_Routes.png",
+  "CC_ROUTES_BANNER_IMAGE_ALT": "CC Routes Banner",
+
+  "CC_ROUTES_SECTION_1_IMAGE_SRC": "/images/20.svg",
+  "CC_ROUTES_SECTION_1_IMAGE_ALT": "VoIP Illustration",
+  "CC_ROUTES_SECTION_1_DESCRIPTION": "CC traffic refers to the advanced routing techniques used in call centers to efficiently manage large volumes of incoming and outgoing calls. These methods involve sophisticated processes such as call distribution, resource optimization, and load balancing to ensure seamless operations. The flow of all inbound communications—whether customer support requests, sales inquiries, or other interactions—is managed through well-designed routing strategies. A key aspect of effective CC traffic management lies in analyzing call patterns and identifying peak periods, allowing businesses to adjust their routing systems accordingly. By doing so, they can reduce customer wait times, enhance service quality, and ensure that resources are allocated where they are needed most, leading to greater operational efficiency.",
+
+  "CC_ROUTES_SECTION_2_IMAGE_SRC": "/images/2.svg",
+  "CC_ROUTES_SECTION_2_IMAGE_ALT": "CC Voice Solutions Illustration",
+  "CC_ROUTES_SECTION_2_DESCRIPTION": "Among the most effective strategies is skills-based routing, which ensures that calls are directed to agents with the necessary expertise to resolve specific issues. This results in faster problem resolution, as customers are matched with the right specialist, whether for technical support or product information. Priority routing is another critical approach, enabling VIP or high-priority customers to receive faster service by bypassing general queues. In addition, automated call distribution (ACD) systems play a crucial role in evenly distributing calls among available agents, helping maintain a balanced workload and preventing delays. Time-based routing further supports operational efficiency by aligning call handling with varying traffic throughout the day, ensuring optimal staffing during peak times. These advanced routing techniques not only improve the management of high call volumes but also elevate the overall customer experience by providing faster and more effective service.",
+
+
+  "CLI_VOICE_TERMINATION_BANNER_IMAGE_SRC": "/Banner/CLIVoiceRoutes.png",
+  "CLI_VOICE_TERMINATION_BANNER_IMAGE_ALT": "CLI Voice Routes Banner",
+
+  "CLI_VOICE_TERMINATION_SECTION_1_IMAGE_SRC": "/images/10.svg",
+  "CLI_VOICE_TERMINATION_SECTION_1_IMAGE_ALT": "VoIP Illustration",
+  "CLI_VOICE_TERMINATION_SECTION_1_DESCRIPTION": "Cloud Qlobe empowers wholesale VoIP service providers and carriers to operate seamlessly from anywhere in the world, providing them with the tools to manage and scale their operations efficiently. Our robust platform enables clients to easily connect, buy, sell, and offer premium VoIP termination services to their customers, all while maintaining control over their services in real time. This global accessibility allows businesses to remain competitive in a rapidly evolving telecom landscape, regardless of their physical location. Additionally, our platform offers advanced monitoring and reporting features, giving service providers critical insights into call quality, traffic patterns, and customer behaviors, helping them to continuously optimize their service offerings.",
+
+  "CLI_VOICE_TERMINATION_SECTION_2_IMAGE_SRC": "/images/14.svg",
+  "CLI_VOICE_TERMINATION_SECTION_2_IMAGE_ALT": "CC Voice Solutions Illustration",
+  "CLI_VOICE_TERMINATION_SECTION_2_DESCRIPTION": "Beyond connectivity, Cloud Qlobe’s wholesale VoIP and routing solutions offer clients the opportunity to unlock new revenue streams while operating in a secure, stable, and scalable environment. We provide a comprehensive range of telecom services, enabling businesses to expand into new markets, offer enhanced services, and attract a wider customer base. With Cloud Qlobe, clients benefit from efficient call routing, high-quality voice transmission, and end-to-end encryption, ensuring both reliability and security. The platform’s flexibility also allows for easy integration with existing infrastructure, reducing operational costs and enhancing profitability. Whether clients are looking to streamline their operations or pursue aggressive market expansion, Cloud Qlobe provides the foundation they need to grow sustainably while consistently delivering high-quality VoIP services to their customers.",
+
+  "DID_VOICE_SOLUTIONS_BANNER_IMAGE_SRC": "/Banner/DIDVoiceSolutions.png",
+  "DID_VOICE_SOLUTIONS_BANNER_IMAGE_ALT": "DID Voice Solutions Banner",
+
+  "DID_VOICE_SOLUTIONS_SECTION_1_IMAGE_SRC": "/images/5.svg",
+  "DID_VOICE_SOLUTIONS_SECTION_1_IMAGE_ALT": "VoIP Illustration",
+  "DID_VOICE_SOLUTIONS_SECTION_1_DESCRIPTION": "Cloud Qlobe offers comprehensive Direct Inward Dialing (DID) solutions that empower businesses to streamline communication through dedicated phone numbers. Our DID services enable organizations to provide their customers with easy access to specific departments or personnel, ensuring that calls are directed to the right place quickly and efficiently. By leveraging our robust platform, clients can enhance their customer service capabilities, reduce call handling times, and improve overall operational efficiency.",
+
+  "DID_VOICE_SOLUTIONS_SECTION_2_IMAGE_SRC": "/images/1.svg",
+  "DID_VOICE_SOLUTIONS_SECTION_2_IMAGE_ALT": "CC Voice Solutions Illustration",
+  "DID_VOICE_SOLUTIONS_SECTION_2_DESCRIPTION": "As a leading provider of VoIP services, Cloud Qlobe delivers high-quality DID solutions that cater to a global audience. Our extensive range of international virtual numbers supports mobile, geographic, non-geographic, toll-free, and Universal International Freephone Numbers (UIFN). We ensure that our clients benefit from a secure and reliable environment, allowing them to generate new revenue opportunities while maintaining exceptional service quality. With our competitive rates and ongoing updates, businesses can trust Cloud Qlobe to meet their communication needs effectively.",
+
+
+  "FAQ_TITLE": "Frequently Asked Questions",
+  "FAQ_SEARCH_PLACEHOLDER": "Search FAQs...",
+  "FAQ_IMAGE_SRC": "/images/18.svg",
+  "FAQ_IMAGE_ALT": "Sign In Illustration",
+  "FAQ_ITEMS": [
+    {
+      "question": "What is VoIP",
+      "answer": "Voice over Internet Protocol (VoIP), also known as IP or internet telephony, is a technology developed to facilitate the conversion of voice in to digital signal for transmission over the internet vs the traditional Public Switched Telephone Networks (PSTN). It can be used for making or receiving calls from Mobile Phones, Computers, and IP Phones."
+    },
+    {
+      "question": "How does it work?",
+      "answer": "VoIP entails using packet-switched protocols, converting analog voice signals into data packets that are transmitted over an internet network using Session Initiation Protocol (SIP). The data packets are again converted to analog voice signals before they reach the receiver when you make a call."
+    },
+    {
+      "question": "What is hosted VoIP?",
+      "answer": "Hosted VoIP refers to VoIP services wherein the hardware is installed at an off-site location by the service provider. It is a beneficial option for organizations which would like to outsource the VoIP infrastructure and its maintenance to a third-party service provider, while using the services in their offices."
+    },
+    {
+      "question": "Is VoIP secure?",
+      "answer": "Calls made over VoIP are highly secure as they are encrypted, thus preventing all possibilities of data interception. VoIP is a great option for people looking to secure their organization’s communications."
+    },
+    {
+      "question": "Why should I opt for VoIP for my business?",
+      "answer": "A VoIP solution allows users to make calls while accessing a number of other software programs like email, e-fax, and remote conferencing. An internet connection is all that is needed to access phone calls from anywhere in the world. Businesses can also decrease costs by opting for VoIP instead of PSTN (Public Switched Telephone Network) as long-distance calls on VoIP are cheaper, along with increased productivity and flexibility by multitasking."
+    },
+    {
+      "question": "Does switching to VoIP affect call quality?",
+      "answer": "The call quality on VoIP depends upon your internet connection and the network of your Internet Service Provider. It also depends on the service level chosen, the destination of the call, and the available bandwidth. Superior Quality of Service (QoS) plays an important role in ensuring minimal call drops, delay, and packet loss. All of these factors help improve the quality of VoIP calls."
+    },
+    {
+      "question": "Do you provide A-Z and CC voice termination services?",
+      "answer": "Yes, Cloud Qlobe is offering wholesale and call center services to Carriers, Tier 1 Carriers, Customers, and Communication Service Providers alike."
+    }
+  ]
+
+}

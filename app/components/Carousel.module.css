@@ -1,0 +1,83 @@
+.carouselContainer {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    height: 60vh;
+    /* Set height as a percentage of the viewport height for responsiveness */
+    max-height: 500px;
+    /* Set a maximum height to prevent it from growing too large */
+    overflow: hidden;
+    /* Hide images that are not visible */
+}
+
+.carouselImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Maintain the height for the images */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 1s ease-in-out;
+    /* Smooth fade-in/out effect */
+}
+
+.carouselImage.active {
+    opacity: 1;
+    /* Show active image */
+}
+
+.carouselTrack {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonContainer {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    z-index: 10;
+}
+
+.button {
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+    color: #4dabf7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #4dabf7;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .carouselContainer {
+        height: 50vh;
+        /* Decrease height on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .carouselContainer {
+        height: 40vh;
+        /* Further decrease height on extra small screens */
+    }
+
+    .buttonContainer {
+        padding: 8px;
+        /* Adjust button padding for smaller screens */
+    }
+}

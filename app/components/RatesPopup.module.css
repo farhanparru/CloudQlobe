@@ -1,0 +1,158 @@
+/* CountryRatesTable.module.css */
+
+.tableContainer {
+    font-family: Arial, sans-serif;
+    width: 120rem;
+    margin: 0 auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #3c78d8;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 12px;
+}
+
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.outerborder {
+    padding: 25px;
+    background-color: #fff;
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border: 2px solid #5ca0d3;
+}
+
+.evenRow {
+    background-color: #ffffff;
+}
+
+.oddRow {
+    background-color: #eaf4ff;
+}
+
+.table tr:hover {
+    background-color: #ffaa60d6;
+    transition: background-color 0.3s ease;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.pageButton {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #3c78d8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.pageButton:hover {
+    background-color: #0056b3;
+}
+
+.pageButton:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+}
+
+.pageButton.active {
+    background-color: #2a5bbf;
+}
+
+
+
+/* POPUP FLY IN ANIMATIONS */
+
+/* Add to RatesPopup.module.css */
+
+.popup-enter {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.popup-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.popup-exit {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.popup-exit-active {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.tableContainer {
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 300px;
+    /* You can adjust this as necessary */
+    z-index: 1000;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Fade-in animation */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* Slide-in animation */
+  .slide-in {
+    animation: slideIn 0.5s ease forwards;
+  }
+  
+  /* Keyframes for fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframes for slide-in */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%); /* Start from the right */
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0); /* End at the normal position */
+      opacity: 1;
+    }
+  }
+  

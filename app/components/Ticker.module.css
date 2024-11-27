@@ -1,0 +1,97 @@
+.tickerWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    /* Customize the background */
+}
+
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 40s linear infinite;
+    /* Adjust the timing for speed */
+    transition: none;
+    /* Ensure smooth transition when pausing */
+}
+
+/* Pause the animation when hovering over the ticker */
+.tickerWrapper:hover .ticker {
+    animation-play-state: paused;
+    /* Pause animation on hover */
+}
+
+/* Pause the animation when clicking on the ticker */
+.tickerWrapper:active .ticker {
+    animation-play-state: paused;
+    /* Pause animation on click */
+}
+
+.card {
+    display: inline-block;
+    width: 260px;
+    /* Adjust the width of the card */
+    height: 60px;
+    /* Adjust the height of the card */
+    margin-right: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    /* Spacing between cards */
+    background-color: #fff;
+    /* Customize the background color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a shadow for card depth */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cardContent {
+    text-align: center;
+}
+
+.cardContent h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cardContent p {
+    font-size: 14px;
+    color: #666;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+        /* Start with the first set of cards fully visible */
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Move the cards to the left until the second set is fully visible */
+    }
+}
+/* ticker.css */
+@keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-ticker {
+    display: flex;
+    animation: ticker 15s linear infinite; /* Adjust duration as needed */
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  

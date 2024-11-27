@@ -1,0 +1,26 @@
+.footer {
+  /* Add any additional footer styles here */
+}
+
+.logoSection {
+  /* Styles for logo section if needed */
+}
+
+.linksSection {
+  /* Styles for quick links section if needed */
+}
+
+.contactSection {
+  /* Styles for contact section if needed */
+}
+
+.socialIcons a {
+  /* Additional styles for social icons if needed */
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add any additional custom styles here */

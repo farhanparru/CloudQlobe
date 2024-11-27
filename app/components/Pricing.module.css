@@ -1,0 +1,100 @@
+.subheading {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.planCard {
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  position: relative;
+  background-color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.planCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Plan Heading with Custom Background Colors */
+.planHeading {
+  background-color: var(--color);
+  /* Dynamically apply background color */
+  padding: 0.75rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.planGold .planHeading {
+  background-color: #fdd835;
+  /* Gold */
+}
+
+.planSilver .planHeading {
+  background-color: #9e9e9e;
+  /* Silver */
+}
+
+.planPlatinum .planHeading {
+  background-color: #2196f3;
+  /* Platinum */
+}
+
+.planCustom .planHeading {
+  background-color: #ff5722;
+  /* Custom */
+}
+
+.customButton {
+  background-color: #ff5722;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .heading {
+    font-size: 2rem;
+    /* Smaller heading on mobile */
+  }
+
+  .subheading {
+    font-size: 1rem;
+    /* Smaller subheading on mobile */
+  }
+
+  .planCard {
+    width: 100%;
+    /* Full width on mobile */
+    margin-bottom: 1.5rem;
+    /* Space between cards */
+  }
+
+  .customButton {
+    padding: 0.5rem 1rem;
+    /* Adjust button padding for smaller screens */
+  }
+}
+
+@media (min-width: 641px) {
+  .planCard {
+    width: calc(25% - 1rem);
+    /* 4 cards in a row on larger screens (25% width) */
+  }
+
+  .planCard:not(:nth-child(4n)) {
+    margin-right: 1rem;
+    /* Add margin between cards */
+  }
+}

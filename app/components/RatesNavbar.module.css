@@ -1,0 +1,82 @@
+/* styles/Navbar.module.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: #dadada;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 4rem;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #D4AF37;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.navbarLeft {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbarItem {
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.navbarItemIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    /* Space between the icon and text */
+}
+
+.navbarItemText {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    /* Adjust text size */
+}
+
+.navbarItem:hover {
+    color: #D4AF37;
+}
+
+.navbarProfile {
+    margin-left: auto;
+    font-weight: 600;
+    color: #005F73;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    /* Consistent font size */
+}
+
+.navbarProfile i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+    /* Adjust the icon size */
+}
+
+.smallTable {
+    transform: scale(0.8);
+    /* Reduce the table size */
+    transform-origin: top left;
+    /* Ensure the scaling happens from the top-left corner */
+}

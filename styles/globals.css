@@ -1,0 +1,74 @@
+
+/* 
+  Import Tailwind base styles, which include default resets 
+  and some basic typography for the document.
+*/
+@tailwind base;
+
+/* 
+  Import Tailwind component styles, which include pre-built 
+  styles for Tailwind's components (like forms, buttons, etc.).
+*/
+@tailwind components;
+
+/* 
+  Import Tailwind utility styles, which provide low-level 
+  utility classes (like margin, padding, text colors, etc.) 
+  that can be used throughout your components.
+*/
+@tailwind utilities;
+
+/* 
+  Define custom CSS variables for the background and text colors.
+  These variables will be used for light mode by default.
+*/
+:root {
+  --background: #f4f4f9;
+  /* Light mode background: light grayish */
+  --foreground: #1a1a2e;
+  /* Light mode text: dark navy */
+}
+
+/* 
+  Media query for dark mode.
+  This applies when the user's system is set to dark mode.
+  We update the CSS variables to reflect a dark theme.
+*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    /* Dark mode background: very dark */
+    --foreground: #f0f0f5;
+    /* Dark mode text: light grayish */
+  }
+}
+
+/* 
+  Global body styles that use the defined CSS variables for 
+  the background and text color. These variables will switch
+  automatically between light and dark mode based on the media query.
+*/
+body {
+  color: #1a1a2e;
+  /* Text color based on light/dark mode */
+  background: #f4f4f9;
+  /* Background color based on light/dark mode */
+  width: 100%;
+  /* Global font settings */
+  font-family: Arial, Helvetica, sans-serif;
+  /* Fallback font stack */
+  
+}
+ 
+/* 
+  Custom utility class definition for text wrapping.
+  The 'text-wrap: balance;' property ensures that text is 
+  balanced and wraps nicely across different screen sizes. 
+  This utility can be applied using the 'text-balance' class.
+*/
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+    /* Balanced text wrapping (browser support may vary) */
+  }
+}

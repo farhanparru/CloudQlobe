@@ -1,0 +1,142 @@
+/* components/VoIPRatesTable.module.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0;
+    padding: 20px;
+   
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notification {
+    background-color: #fff3cd;
+    /* Light yellow background */
+    color: #856404;
+    /* Dark yellow text */
+    border: 1px solid #ffeeba;
+    /* Light yellow border */
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.searchContainer {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    /* Light gray border */
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.searchInput:focus {
+    border-color: #0070f3;
+    /* Blue border on focus */
+    outline: none;
+}
+
+.tableContainer {
+    overflow-x: auto;
+    /* Enable horizontal scrolling on small screens */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    /* Ensure table doesn't get too narrow */
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    /* Light gray border */
+    text-align: left;
+}
+
+.table th {
+    background-color: #f4f4f4;
+    /* Light gray background for headers */
+    font-weight: bold;
+}
+
+.tableRow:hover {
+    background-color: #f1f1f1;
+    /* Slightly darker gray on row hover */
+}
+
+.tableCell {
+    /* Optional: Add specific styles to table cells if needed */
+}
+
+.loading,
+.noResults {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    color: #555;
+    /* Medium gray text */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    /* Allow pagination buttons to wrap on small screens */
+    gap: 10px;
+    /* Space between buttons */
+}
+
+.pageButton {
+    padding: 8px 12px;
+    border: 1px solid #0070f3;
+    /* Blue border */
+    background-color: #fff;
+    /* White background */
+    color: #0070f3;
+    /* Blue text */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pageButton:hover:not(.activePage):not(.disabled) {
+    background-color: #e6f0ff;
+    /* Light blue background on hover */
+}
+
+.activePage {
+    background-color: #0070f3;
+    /* Blue background for active page */
+    color: #fff;
+    /* White text for active page */
+}
+
+.disabled {
+    background-color: #f0f0f0;
+    /* Light gray background */
+    color: #aaa;
+    /* Gray text */
+    border-color: #ccc;
+    /* Light gray border */
+    cursor: not-allowed;
+    /* Disabled cursor */
+}

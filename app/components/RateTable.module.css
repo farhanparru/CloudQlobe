@@ -1,0 +1,403 @@
+/* General Body and Container Styling */
+.tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+  /* Ensure horizontal scrolling on small screens */
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Error Notification */
+.errorNotification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.errorNotification i {
+  font-size: 24px;
+}
+
+.errorNotification .closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.errorNotification .closeBtn:hover {
+  opacity: 0.8;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffcc00;
+  color: black;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.notification i {
+  font-size: 24px;
+}
+
+/* Search Area */
+.searchArea {
+  display: flex;
+  justify-content: right;
+  margin: 10px 0;
+  padding: 10px;
+  margin-right:2em;
+}
+
+.searchInput {
+  padding: 12px;
+  width: 300px;
+  border: 2px solid #002B5B;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s;
+}
+
+.searchInput:focus {
+  border-color: #D4AF37;
+}
+
+.searchBtn {
+  width: fit-content;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  background-color: rgb(251 146 60);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+.searchBtn:hover {
+  background-color: rgb(22 163 74);
+}
+
+.joinBtn {
+  padding: 12px 25px;
+  background: rgb(22 163 74);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+.joinBtn:hover {
+  background: rgb(251 146 60);
+}
+
+/* Table Styling */
+.rateTable {
+  width: 98%;
+  
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-right: 2.5em; 
+  background-color: #ffffff;
+  border-radius: 8px;
+  table-layout: fixed;
+  overflow: hidden;
+  align-items:center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rateTable th:nth-child(3) {
+  width: 25%; /* Make the 3rd column wider */
+}
+.rateTable th:nth-child(2) {
+  width:20%; /* Make the 3rd column wider */
+}
+.rateTable th,
+.rateTable td {
+  padding: 12px;
+  text-align: center;
+
+}
+
+.rateTable th {
+  
+  color: white ;background: #005F73;
+  font-weight: 50;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e9ecef;
+  border-left: 1px solid #e9ecef;
+}
+
+.rateTable td {
+  border-bottom: 1px solid #e9ecef;
+  border-left: 1px solid #e9ecef;
+}
+
+.rateTable td {
+  border-bottom: 1px solid #e9ecef;
+  border-left: 1px solid #e9ecef;
+}
+
+.rateTable tr:nth-child(even) {
+  background-color: #dde0e5; /* A light blue-gray shade for even rows */
+}
+
+.rateTable tr:nth-child(odd) {
+  background-color: #ffffff; /* White for odd rows */
+}
+
+.rateTable tr:hover {
+  background-color: #e0ebff; /* Highlight the row on hover with a soft blue shade */
+}
+
+
+.rateTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rateTable tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.rateTable tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  .rateTable {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .rateTable thead {
+    display: none;
+  }
+
+  .rateTable tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .rateTable td {
+    display: block;
+    text-align: right;
+    padding: 12px;
+    position: relative;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .rateTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    width: 45%;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .rateTable td:last-child {
+    border-bottom: 0;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; /* Center the pagination controls */
+  margin-top: 1rem; /* Space between table and pagination */
+}
+
+.pageButton {
+  margin: 0 0.25rem; /* Space between buttons */
+  padding: 0.5rem 1rem; /* Button padding */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f8f8f8; /* Button background */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.2s ease; /* Smooth background change */
+}
+
+.pageButton:hover:not(.activePage):not(.disabled) {
+  background-color: #e6f0ff;
+}
+
+.activePage {
+  background-color: #0070f3;
+  color: #fff;
+}
+
+.disabled {
+  background-color: #f0f0f0;
+  color: #aaa;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+
+  /* Adjust table container for larger tablets */
+  .tableContainer {
+    margin: 0 10px;
+    padding: 10px;
+  }
+
+  /* Adjust search input and buttons */
+  .searchInput {
+    width: 70%;
+  }
+
+  .searchBtn,
+  .joinBtn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust table font size */
+  .rateTable th,
+  .rateTable td {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Responsive Table */
+  .rateTable th,
+  .rateTable td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .tableContainer {
+    overflow-x: auto;
+    margin: 0;
+  }
+
+  /* Make the search input full-width on small screens */
+  .searchInput {
+    width: 100%;
+  }
+
+  .searchBtn,
+  .joinBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  /* Make buttons stack vertically for small screens */
+  .searchArea {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust title */
+  .title {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust pagination buttons */
+  .pagination {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .pageButton {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Smaller screens (Phones) */
+  .rateTable th,
+  .rateTable td {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .rateTable {
+    font-size: 0.9rem;
+  }
+
+  /* Full width search input */
+  .searchInput {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .searchBtn,
+  .joinBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .pageButton {
+    padding: 8px;
+    font-size: 10px;
+  }
+}

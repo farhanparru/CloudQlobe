@@ -1,0 +1,97 @@
+.servicesBody {
+  background-color: #fff;
+}
+
+.services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.subheading {
+  text-align: center;
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.content {
+  display: flex;
+  align-items: justify;
+  gap: 3rem;
+}
+
+.illustration {
+  flex: 1;
+}
+
+.illustrationImage {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.serviceNumber {
+  color: #e0e0e0;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.serviceTitle {
+  color: #1a1a1a;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.serviceDescription {
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.specialOffers {
+  display: flex;
+  align-items: center;
+  background-color: #f9a26c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 2rem;
+  float: right;
+  transition: background-color 0.3s ease;
+}
+
+.specialOffers:hover {
+  background-color: #f7934f;
+}
+
+.arrow {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .illustration {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,84 @@
+.navbar {
+    background-color: #232d36;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    /* Fix the navbar at the top */
+    top: 0;
+    /* Align to the top of the screen */
+    left: 0;
+    /* Ensure it's aligned to the left */
+    right: 0;
+    /* Ensure it's aligned to the right */
+    z-index: 1000;
+    /* Make sure it's above other content */
+    width: 100%;
+    /* Make it span across the full width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow to distinguish it */
+}
+
+.navbar-md {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.nav-link {
+    color: #fafafa;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #4dabf7;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    width: 12rem;
+    background-color: #232d36;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #fafafa;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: #4dabf7;
+    color: #232d36;
+}
+
+.signup-button {
+    background-color: #ff9c7a;
+    color: #232d36;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.signup-button:hover {
+    background-color: #f78360;
+}
+
+.login-button {
+    background-color: transparent;
+    border: 1px solid #4dabf7;
+    color: #4dabf7;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.login-button:hover {
+    background-color: #4dabf7;
+    color: #232d36;
+}
