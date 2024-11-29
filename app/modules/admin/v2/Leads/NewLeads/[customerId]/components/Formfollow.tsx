@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const FollowUpTab = () => {
+const FormFollowUpTab = ({setActiveTab}) => {
 
   const [followUpDetails, setFollowUpDetails] = useState({
     customerId: "",
@@ -29,12 +29,9 @@ const FollowUpTab = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axiosInstance.post("v3/api/followups", followUpDetails);
-      console.log(response,"response");
-      
+      const response = await axiosInstance.post("v3/api/followups", followUpDetails);      
       if (response.status === 201) {
        toast.success("Follow-up added successfully!");
-        router.push("/");
       } else {
         alert("Error adding follow-up.");
       }
@@ -138,6 +135,7 @@ const FollowUpTab = () => {
               <button
                 type="submit"
                 className="w-full px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:from-orange-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+                onClick={() => setActiveTab("followup")}
               >
                 Add Follow-Up
               </button>
@@ -147,4 +145,4 @@ const FollowUpTab = () => {
   );
 };
 
-export default FollowUpTab;
+export default FormFollowUpTab;
