@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const FollowUpTab = () => {
+const FollowUpTab = ({ setActiveTab }) => {
   const [followups, setFollowups] = useState([]);
 
   useEffect(() => {
@@ -46,12 +46,12 @@ const FollowUpTab = () => {
           ))}
         </div>
       </div>
-      <Link href=""><button
-        type="submit"
+      <button
+        onClick={() => setActiveTab("formfollow")}
         className="w-[45rem] px-3 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:from-orange-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
       >
         Add Follow-Up
-      </button></Link>
+      </button>
     </div>
   );
 };
