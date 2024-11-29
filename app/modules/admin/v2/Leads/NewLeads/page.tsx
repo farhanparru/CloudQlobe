@@ -5,6 +5,8 @@ import React, { useState, useEffect } from 'react';
 import axiosInstance from '../../utils/axiosinstance';
 import Layout from '../../layout/page';
 
+
+
 interface Customer {
   companyName: string;
   companyEmail: string;
@@ -107,6 +109,7 @@ const CustomersPage = () => {
     });
 
   return (
+    
     <Layout>
       <div className="p-8 text-gray-800 min-h-screen">
         <h1 className="text-3xl font-bold mb-4 text-black"> Carrier Lead Management</h1>
@@ -233,7 +236,8 @@ const CustomersPage = () => {
         )}
       </div>
     </Layout>
+
   );
 };
 
-export default CustomersPage;
+export default CustomersPage

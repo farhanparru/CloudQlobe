@@ -166,19 +166,20 @@ const Header: React.FC = () => {
           </>
         ) : (
           <>
-            <Link href="https://www.cloudqlobe.com/modules/auth/Base/Signup">
-              <button className={`${buttonBaseClasses} bg-green-600 hover:bg-green-700`}>
-                <UserPlus size={18} />
-                <span>SIGN UP</span>
-              </button>
-            </Link>
-            <Link href="https://www.cloudqlobe.com/modules/auth/Base/login">
-              <button className={`${buttonBaseClasses} bg-orange-400 hover:bg-orange-500`}>
-                <LogIn size={18} />
-                <span>LOGIN</span>
-              </button>
-            </Link>
-          </>
+          <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}/modules/auth/Base/Signup`}>
+            <button className={`${buttonBaseClasses} bg-green-600 hover:bg-green-700`}>
+              <UserPlus size={18} />
+              <span>SIGN UP</span>
+            </button>
+          </Link>
+          <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}/modules/auth/Base/login`}>
+            <button className={`${buttonBaseClasses} bg-orange-400 hover:bg-orange-500`}>
+              <LogIn size={18} />
+              <span>LOGIN</span>
+            </button>
+          </Link>
+        </>
+        
         )}
       </div>
     </nav>

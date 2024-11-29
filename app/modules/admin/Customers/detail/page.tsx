@@ -72,7 +72,7 @@ const CustomerDetailsPage: React.FC = () => {
         <p><strong>Country:</strong> {customer.country}</p>
         <p><strong>Company Phone:</strong> {customer.companyPhone}</p>
 
-        <h2 className="text-xl font-semibold mb-4 text-indigo-600 mt-6">User Information</h2>
+        <h2 className="text-xl font-semibold mb-4 text-indigo-600 mt-6">User Informationss</h2>
         <p><strong>First Name:</strong> {customer.userFirstname}</p>
         <p><strong>Last Name:</strong> {customer.userLastname}</p>
         <p><strong>Username:</strong> {customer.username}</p>

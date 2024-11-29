@@ -113,15 +113,7 @@ const FollowUp = () => {
       <h2 className="text-2xl font-bold mb-4">Follow-up</h2>
       <p className="text-gray-600 mb-6">View and manage follow-up tasks here.</p>
 
-      {/* Add Follow-up Button */}
-      <div className="mb-6">
-        <button
-          onClick={handleAddFollowUpClick}
-          className="bg-green-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-500 transition duration-300"
-        >
-          Add Follow-up
-        </button>
-      </div>
+     
 
       {/* Tabs Navigation */}
     {/* Tabs Navigation */}

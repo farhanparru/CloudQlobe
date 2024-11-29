@@ -87,7 +87,7 @@ const CustomersPage = () => {
 
   return (
     <div className="p-8 bg-gray-50 text-gray-800 min-h-screen">
-      <h1 className="text-3xl font-bold mb-4 text-indigo-700">Lead Management</h1>
+      <h1 className="text-3xl font-bold mb-4 text-indigo-700">Lead Managementt</h1>
       <p className="text-gray-600 mb-6">Manage your Leads here.</p>
 
       {/* Add Lead Button */}

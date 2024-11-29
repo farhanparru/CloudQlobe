@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useParams } from 'next/navigation';
 import axiosInstance from '../../utils/axiosinstance';
+import DashboardLayout from '../../../admin/v2/Leads/NewLeads/AdminDashboard';
 // Define the interface for Carrier data
 interface Carrier {
   _id: string;
@@ -57,6 +58,7 @@ const CarrierDetailsPage: React.FC = () => {
   }
 
   return (
+   
     <div className="p-8 bg-gray-50 text-gray-800 min-h-screen">
       <h1 className="text-3xl font-bold mb-4 text-indigo-700">Carrier Details</h1>
 
@@ -88,6 +90,7 @@ const CarrierDetailsPage: React.FC = () => {
         <p><strong>Created At:</strong> {new Date(carrier.createdAt).toLocaleDateString()}</p>
       </div>
     </div>
+ 
   );
 };
 

@@ -15,6 +15,7 @@ import {
 } from 'chart.js';
 import Layout from '../layout/page';
 
+
 // Register necessary components from Chart.js
 ChartJS.register(
   CategoryScale,
@@ -80,6 +81,7 @@ const rateIncreaseData = {
 
 const AdminHomePage = () => {
   return (
+    
     <Layout>
     <div className="min-h-screen bg-gray-100 p-8">
       <h1 className="text-3xl font-bold mb-6 text-black">Admin Dashboard</h1>
@@ -135,6 +137,7 @@ const AdminHomePage = () => {
 
     </div>
     </Layout>
+ 
   );
 };
 

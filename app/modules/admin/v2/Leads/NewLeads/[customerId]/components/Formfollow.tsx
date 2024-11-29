@@ -1,67 +1,64 @@
-"use client"
-import React, { useState, useEffect } from "react";
-import axiosInstance from "../../../utils/axiosinstance";
-import Layout from "../../../layout/page";
+import React, { useState} from "react";
+import axiosInstance from "../../../../utils/axiosinstance";
 import { Calendar, Phone, Mail, MessageSquare, User, Briefcase } from 'lucide-react';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useRouter } from "next/navigation";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const AddFollowUp = () => {
+const FollowUpTab = () => {
 
-  const [customers, setCustomers] = useState([]);
-  const [selectedCustomer, setSelectedCustomer] = useState("");
+  const [followUpDetails, setFollowUpDetails] = useState({
+    customerId: "",
+    companyId: "",
+    followupDescription: "",
+    followupMethod: "call",
+    followupStatus: "pending",
+    followupCategory: "leads",
+    followupTime: new Date(),
+    appointedPerson: "not now",
+  });
 
 
-  useEffect(() => {
-    const fetchCustomers = async () => {
-      try {
-        const response = await axiosInstance.get("v3/api/customers");
-        setCustomers(response.data);
-      } catch (error) {
-        console.error("Error fetching customers:", error);
+
+  
+
+  const router = useRouter()
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axiosInstance.post("v3/api/followups", followUpDetails);
+      console.log(response,"response");
+      
+      if (response.status === 201) {
+       toast.success("Follow-up added successfully!");
+        router.push("/");
+      } else {
+        alert("Error adding follow-up.");
       }
-    };
-    fetchCustomers();
-  }, []);
+    } catch (error) {
+      console.error("Error submitting follow-up:", error);
+      alert("Failed to submit follow-up.");
+    }
+  };
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFollowUpDetails((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
 
 
   return (
-    <Layout>
-      <div className="min-h-screen p-8">
-        <div className="max-w-3xl mx-auto">
-       
-
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <label className="block mb-2 font-semibold text-gray-700">Select Customer</label>
-            <div className="relative">
-              <select
-                className="w-full p-3 border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out"
-                value={selectedCustomer}
-                onChange={(e) => {
-                  const customer = customers.find(c => c._id === e.target.value);
-                  setSelectedCustomer(e.target.value);
-                  setFollowUpDetails({
-                    ...followUpDetails,
-                    customerId: customer._id,
-                    companyId: customer.customerId,
-                  });
-                }}
-              >
-                <option value="">Select a customer</option>
-                {customers.map((customer) => (
-                  <option key={customer._id} value={customer._id}>
-                    {customer.companyName} ({customer.customerType})
-                  </option>
-                ))}
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                <Briefcase className="h-5 w-5 text-blue-500" />
-              </div>
-            </div>
-          </div>
-
-          {selectedCustomer && (
-            <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-6">
+    <div>
+      <ToastContainer/>
+      <h2>Follow Up Information</h2>
+      <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-6">
               <div className="mb-6">
                 <label className="block mb-2 font-semibold text-gray-700">Follow-Up Description</label>
                 <textarea
@@ -120,14 +117,34 @@ const AddFollowUp = () => {
                 </div>
               </div>
 
-        
-           
+              <div className="mb-6">
+                <label className="block mb-2 font-semibold text-gray-700">Next Follow-Up Time</label>
+                <div className="relative">
+                  <DatePicker
+                    selected={followUpDetails.followupTime}
+                    onChange={(date) =>
+                      setFollowUpDetails((prev) => ({ ...prev, followupTime: date }))
+                    }
+                    showTimeSelect
+                    dateFormat="Pp"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out"
+                  />
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <Calendar className="h-5 w-5 text-blue-500" />
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:from-orange-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
+              >
+                Add Follow-Up
+              </button>
             </form>
-          )}
-        </div>
-      </div>
-    </Layout>
+   
+    </div>
   );
 };
 
-export default AddFollowUp;
+export default FollowUpTab;
