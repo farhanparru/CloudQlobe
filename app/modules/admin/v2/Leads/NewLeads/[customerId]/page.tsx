@@ -37,7 +37,7 @@ const tabs = [
     icon: DollarSign,
     color: "blue",
     submenu: [
-      { id: "rates1", label: "Rates", path: "Rates" },
+      { id: "rates1", label: "Base Rates", path: "Rates" },
       { id: "rates2", label: "Private Rates", path: "PrivateRates" },
     ],
   },

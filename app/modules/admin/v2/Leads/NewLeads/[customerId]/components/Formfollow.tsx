@@ -9,48 +9,42 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const FormFollowUpTab = ({setActiveTab}) => {
 
-  const [followUpDetails, setFollowUpDetails] = useState({
-    customerId: "",
-    companyId: "",
-    followupDescription: "",
-    followupMethod: "call",
-    followupStatus: "pending",
-    followupCategory: "leads",
-    followupTime: new Date(),
-    appointedPerson: "not now",
-  });
-
-
-
-  
-
-  const router = useRouter()
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axiosInstance.post("v3/api/followups", followUpDetails);      
-      if (response.status === 201) {
-       toast.success("Follow-up added successfully!");
-      } else {
-        alert("Error adding follow-up.");
-      }
-    } catch (error) {
-      console.error("Error submitting follow-up:", error);
-      alert("Failed to submit follow-up.");
-    }
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFollowUpDetails((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-
-
+    const [followUpDetails, setFollowUpDetails] = useState({
+        customerId: "",
+        companyId: "",
+        followupDescription: "",
+        followupMethod: "call",
+        followupStatus: "pending",
+        followupCategory: "leads",
+        followupTime: new Date(),
+        appointedPerson: "not now",
+      });
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          const response = await axiosInstance.post("v3/api/followups", followUpDetails);
+          console.log(response, "hello");
+          if (response.status === 201) {
+            toast.success("Follow-up added successfully!");
+            setActiveTab("followup");
+          } else {
+            toast.error("Error adding follow-up.");
+          }
+        } catch (error) {
+          console.error("Error submitting follow-up:", error);
+          toast.error("Failed to submit follow-up.");
+        }
+      };
+    
+      const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFollowUpDetails((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+      };
+    
   return (
     <div>
       <ToastContainer/>
@@ -133,15 +127,14 @@ const FormFollowUpTab = ({setActiveTab}) => {
               </div>
 
               <button
-                type="submit"
+                type="submit"      
                 className="w-full px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:from-orange-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-150 ease-in-out"
-                onClick={() => setActiveTab("followup")}
+            
               >
                 Add Follow-Up
               </button>
             </form>
-   
-    </div>
+         </div>
   );
 };
 

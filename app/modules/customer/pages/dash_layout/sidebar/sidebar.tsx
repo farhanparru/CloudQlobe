@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -14,10 +14,12 @@ import {
   PieChart,
   TrendingUp,
 } from "lucide-react";
+import { jwtDecode } from "jwt-decode";
+import axiosInstance from "@/app/modules/admin/utils/axiosinstance";
 
 const BASE_PATH = "/modules/customer/pages";
 
-const menuItems = [
+const getMenuItems = (customerType) => [
   { 
     id: "home", 
     icon: Home, 
@@ -40,7 +42,9 @@ const menuItems = [
     submenu: [
       { id: "ccRates", label: "CC Rates", icon: LineChart, path: `${BASE_PATH}/rates_page/Rates` },
       { id: "myRates", label: "My Rates", icon: PieChart, path: `${BASE_PATH}/myRates` },
-      { id: "privateRates", label: "Private Rates", icon: TrendingUp, path: `${BASE_PATH}/rates_page/PrivateRates` },
+      ...(customerType === "CarrierLead" || customerType === "Customer"
+        ? [{ id: "privateRates", label: "Private Rates", icon: TrendingUp, path: `${BASE_PATH}/rates_page/PrivateRates` }]
+        : []),
       { id: "cliRates", label: "CLI Rates", icon: Monitor, path: `${BASE_PATH}/cliRates` },
     ],
   },
@@ -70,7 +74,7 @@ const menuItems = [
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("home");
   const [isDropdownOpen, setIsDropdownOpen] = useState(null);
-
+  const [profileData, setProfileData] = useState(null);
   const getBackgroundColor = (color, isActive) => {
     const colors = {
       emerald: isActive ? "bg-emerald-100" : "hover:bg-emerald-50",
@@ -94,7 +98,24 @@ const Navbar = () => {
     };
     return colors[color];
   };
-
+  useEffect(() => {
+    const fetchProfileData = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        if (token) {
+          const decoded = jwtDecode(token);
+          const customerId = decoded.id;
+          const response = await axiosInstance.get(`v3/api/customers/${customerId}`);
+          setProfileData(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching profile data", error);
+      }
+    };
+    fetchProfileData();
+  }, []);
+  const menuItems = getMenuItems(profileData?.customerType);
+  console.log(profileData)
   return (
     <div className="fixed top-16 left-0 w-full bg-white shadow-lg z-50 p-4">
      <div className="flex items-center justify-between gap-x-4">

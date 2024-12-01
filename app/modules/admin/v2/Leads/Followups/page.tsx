@@ -110,7 +110,7 @@ const FollowUp = () => {
   return (
     <Layout>
     <div className="p-8  text-gray-900 min-h-screen">
-      <h2 className="text-2xl font-bold mb-4">Follow-up</h2>
+      <h2 className="text-2xl font-bold mb-4">Notification</h2>
       <p className="text-gray-600 mb-6">View and manage follow-up tasks here.</p>
 
      

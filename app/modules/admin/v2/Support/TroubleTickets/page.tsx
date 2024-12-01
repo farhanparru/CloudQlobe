@@ -5,14 +5,16 @@ import Layout from '../../layout/page';
 import axiosInstance from '../../../utils/axiosinstance';
 const FollowUp = () => {
   const router = useRouter(); // Initialize useRouter
-  const [activeTab, setActiveTab] = useState('calls');
+  const [activeTab, setActiveTab] = useState('call');
   const [followUpData, setFollowUpData] = useState([]);
   const [customerData, setCustomerData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   // Navigate to the add follow-up page
- 
+  const handleAddFollowUpClick = () => {
+    router.push('/modules/admin/v2/Leads/Followups/Addfollowup');
+  };
 
   // Fetch follow-up data and then fetch customer data based on customerId
   useEffect(() => {
@@ -50,14 +52,14 @@ const FollowUp = () => {
     if (error) {
       return <div className="text-center py-4 text-gray-600">Error fetching data: {error}</div>;
     }
-    const excludedCategories = ['General', 'Sales', 'Carriers', 'Leads'];
+
     // Filter follow-ups based on the active tab
-    const filteredFollowUps = followUpData.filter(item => item.followupMethod === activeTab && !excludedCategories.includes(item.followupCategory));
+    const filteredFollowUps = followUpData.filter(item => item.followupMethod === activeTab && item.followupCategory === 'Leads');
 
     if (filteredFollowUps.length === 0) {
       return (
         <div className="text-center py-4 text-gray-600">
-          No data available for {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
+          No data available for {activeTab?.charAt(0).toUpperCase() + activeTab.slice(1)}
         </div>
       );
     }
@@ -76,19 +78,21 @@ const FollowUp = () => {
           {filteredFollowUps.map((followUp) => {
             // Find customer details based on customerId
             const customer = customerData[followUp.customerId] || {}; // Access customer data using customerId
+            console.log(customer,"k");
+            
 
             return (
               <tr
                 key={followUp.id} // Use a unique identifier for the key (e.g., followUp.id)
                 className="cursor-pointer hover:bg-gray-100" // Add hover effect for rows
-                onClick={() => router.push(`/modules/admin/v2/Support/FollowUps/FollowupDetails/${followUp.id}`)} // Navigate to details page
+                onClick={() => router.push(`/modules/admin/v2/Leads/Followups/${followUp.id}`)} // Navigate to details page
               >
                 <td className="border px-4 py-2">{customer.customerId || 'N/A'}</td>
                 <td className="border px-4 py-2">
                   <a
                     onClick={(e) => {
                       e.stopPropagation(); // Prevent row click from triggering
-                      router.push(`/modules/admin/v2/Support/FollowUps/${followUp._id}`); // Link to customer details
+                      router.push(`/modules/admin/v2/Leads/Followups/${followUp._id}`); // Link to customer details
                     }}
                     className="text-blue-600 hover:underline"
                   >
@@ -108,11 +112,19 @@ const FollowUp = () => {
   return (
     <Layout>
     <div className="p-8  text-gray-900 min-h-screen">
-      <h2 className="text-2xl font-bold mb-4">Trouble Ticket</h2>
-      <p className="text-gray-600 mb-6">View and manage Trouble here.</p>
+      <h2 className="text-2xl font-bold mb-4">Follow-up</h2>
+      <p className="text-gray-600 mb-6">View and manage follow-up tasks here.</p>
 
       {/* Add Follow-up Button */}
-    
+      <div className="mb-6">
+        <button
+          onClick={handleAddFollowUpClick}
+          className="bg-green-600 text-white px-4 py-2 rounded-md shadow hover:bg-blue-500 transition duration-300"
+        >
+          Add Follow-up
+        </button>
+      </div>
+
       {/* Tabs Navigation */}
     {/* Tabs Navigation */}
 <div className="flex justify-center mb-6">

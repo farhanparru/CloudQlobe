@@ -61,7 +61,7 @@ const Topbar = () => {
       color: "#10B981",
       subItems: [
         { name: "New Leads", href: `${BASE_URL}/Leads/NewLeads` },
-        { name: "Followup", href: `${BASE_URL}/Leads/Followups` },
+        { name: "notification", href: `${BASE_URL}/Leads/Followups` },
       ],
     },
     {
