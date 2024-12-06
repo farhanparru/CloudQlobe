@@ -22,7 +22,7 @@ const Chatbot = () => {
         scrollToBottom();
     }, [messages]);
 
-    // Authentication check
+  
     useEffect(() => {
         try {
             const storedToken = localStorage.getItem("token");
