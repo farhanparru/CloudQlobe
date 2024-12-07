@@ -37,7 +37,7 @@ const RateTable: React.FC<RateTableProps> = ({ className }) => {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const response = await fetch("https://backend.cloudqlobe.com/v3/api/clirates");
+        const response = await fetch("https://cloudqlobe-server.onrender.com/v3/api/clirates");
         if (!response.ok) throw new Error("Failed to fetch rates");
         const data = await response.json();
         setRates(data);
