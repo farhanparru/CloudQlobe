@@ -32,7 +32,8 @@ const CurrencyTicker = () => {
 
         setTickerData(detailedResponses);
       } catch (err) {
-        setError(err.message);
+       console.log(err);
+       
       } finally {
         setLoading(false);
       }
