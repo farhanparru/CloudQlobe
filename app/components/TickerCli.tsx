@@ -12,7 +12,7 @@ const CurrencyTicker = () => {
     const fetchData = async () => {
       try {
         const cctResponse = await fetch("https://backend.cloudqlobe.com/v3/api/clt");
-        if (!cctResponse.ok) throw new Error("Failed to fetch rate IDs");
+        if (!cctResponse.ok) throw new Error("Failed to fetch rate IDS");
         const cctData = await cctResponse.json();
         const uniqueRateIds = [...new Set(cctData.flatMap(item => item.rateids))];
         const rateResponses = await Promise.all(
