@@ -25,7 +25,7 @@ const CurrencyTicker = () => {
         // Fetch detailed data for each ID
         const detailedResponses = await Promise.all(
           ids.map((id) =>
-            fetch(`https://cloudqlobe-server.onrender.com/v3/api/rates/${id}`).then((res) => res.json())
+            fetch(`https://backend.cloudqlobe.com/v3/api/rates/${id}`).then((res) => res.json())
           )
         );
 
