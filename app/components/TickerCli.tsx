@@ -11,13 +11,13 @@ const CurrencyTicker = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const cctResponse = await fetch("https://cloudqlobe-server.onrender.com/v3/api/clt");
+        const cctResponse = await fetch("https://backend.cloudqlobe.com/v3/api/clt");
         if (!cctResponse.ok) throw new Error("Failed to fetch rate IDs");
         const cctData = await cctResponse.json();
         const uniqueRateIds = [...new Set(cctData.flatMap(item => item.rateids))];
         const rateResponses = await Promise.all(
           uniqueRateIds.map(id =>
-            fetch(`https://cloudqlobe-server.onrender.com/v3/api/clirates/${id}`).then(res => res.json())
+            fetch(`https://backend.cloudqlobe.com/v3/api/clirates/${id}`).then(res => res.json())
           )
         );
         setTickerData(rateResponses);
