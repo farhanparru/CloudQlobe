@@ -13,7 +13,7 @@ const CurrencyTicker = () => {
     const fetchData = async () => {
       try {
         // Fetch basic rate data
-        const response = await fetch("https://cloudqlobe-server.onrender.com/v3/api/rates");
+        const response = await fetch("https://backend.cloudqlobe.com/v3/api/rates");
         if (!response.ok) throw new Error("Failed to fetch rate data");
         
         const basicData = await response.json();
