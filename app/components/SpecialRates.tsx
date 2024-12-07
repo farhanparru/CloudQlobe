@@ -39,7 +39,7 @@ const RateTable: React.FC<RateTableProps> = ({ className }) => {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const response = await fetch("https://cloudqlobe-server.onrender.com/v3/api/rates");
+        const response = await fetch("https://backend.cloudqlobe.com/v3/api/rates");
         if (!response.ok) throw new Error("Failed to fetch rates");
         const data = await response.json();
         setRates(data);
@@ -110,7 +110,7 @@ const RateTable: React.FC<RateTableProps> = ({ className }) => {
   const structuredData = generateSchema("ItemList", {
     items: rates.map(rate => ({
       name: rate.qualityDescription,
-      url: `https://www.cloudqlobe.com/pricing`, // Modify to match your routing
+      url: `https://backend.cloudqlobe.com/pricing`, // Modify to match your routing
     })),
   });
 
